@@ -12,6 +12,7 @@ format:
   html:
     theme: minty
     css: styles.css
+    toc: true
 
 margin-header: google-translate.html
 
