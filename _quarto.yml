@@ -8,6 +8,7 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/daviddaytw
+  google-analytics: "G-GZ6NKY8J14"
 format:
   html:
     theme: minty
