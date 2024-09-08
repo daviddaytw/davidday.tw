@@ -1,6 +1,7 @@
 body {
   margin: auto auto;
   max-width: 720px;
+  padding: 8px;
 }
 
 ul li {
