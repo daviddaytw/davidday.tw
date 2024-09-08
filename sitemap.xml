@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://davidday.tw/</loc>
+  </url>
+  <url>
+  <loc>https://davidday.tw/en.html</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://davidday.tw/zh.html" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://davidday.tw/en.html" />
+  </url>
+  <url>
+    <loc>https://davidday.tw/zh.html</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh"
+      href="https://davidday.tw/zh.html" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://davidday.tw/en.html" />
+  </url>
+  <url>
+    <loc>https://davidday.tw/facehealth</loc>
+  </url>
+  <url>
+    <loc>https://davidday.tw/self-diagnose</loc>
+  </url>
+  <url>
+    <loc>https://davidday.tw/plan-adam</loc>
+  </url>
+</urlset>
