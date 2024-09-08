@@ -1,0 +1,8 @@
+body {
+  margin: auto auto;
+  max-width: 720px;
+}
+
+ul li {
+  line-height: 2;
+}
