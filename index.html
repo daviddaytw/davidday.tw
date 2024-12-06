@@ -1,43 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark" />
 
-  <title>David Day | 戴惟</title>
+  <title>戴惟 | David Day</title>
   <meta name="author" content="daviddaytw" />
-  <meta name="description" content="David Day's website." />
-  <link rel="alternate" href="https://davidday.tw/en.html" hreflang="en-US" />
-  <link rel="alternate" href="https://davidday.tw/zh.html" hreflang="zh-Hant" />
+  <meta name="description" content="戴惟的個人網站，21世紀發明家，喜歡讓事情變得更簡單，因為這樣更能對焦在問題上。" />
 
-  <meta property="og:title" content="David Day's website." />
-  <meta property="og:description" content="David Day's website." />
-  <meta property="og:url" content="https://davidday.tw/en.html" />
+  <meta property="og:title" content="戴惟 | David Day" />
+  <meta property="og:locale" content="zh-Hant" />
+  <meta property="og:description" content="戴惟的個人網站，21世紀發明家，喜歡讓事情變得更簡單，因為這樣更能對焦在問題上。" />
+  <meta property="og:url" content="https://davidday.tw/" />
   <meta property="og:site_name" content="davidday.tw" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="David Day" />
+  <meta property="twitter:title" content="戴惟 | David Day" />
+
+  <style>
+body {
+  margin: auto auto;
+  max-width: 720px;
+  padding: 8px;
+}
+ul li {
+  line-height: 2;
+}
+.card {
+  flex: 1;
+  border: solid 1px ;
+  margin: 4px;
+  padding: 8px;
+}
+  </style>
 </head>
 
 <body>
-  <!-- Redirect use to proper page based on locale -->
-  <script type="text/javascript">
-    let lang = window.navigator.languages ? window.navigator.languages[0] : null;
-    lang = lang || window.navigator.language || window.navigator.browserLanguage
-      || window.navigator.userLanguage;
+  <h1>戴惟 | David Day</h1>
 
-    let shortLang = lang;
-    if (shortLang.indexOf('-') !== -1)
-      shortLang = shortLang.split('-')[0];
+  [<a href="https://www.facebook.com/weiday.tw">Facebook</a>]
+  [<a href="https://github.com/daviddaytw">Github</a>]
+  [<a href="https://twitter.com/daviddaytw">Twitter</a>]
 
-    if (shortLang.indexOf('_') !== -1)
-      shortLang = shortLang.split('_')[0];
+  <div>
+    <p>2001 年出生的發明家，喜歡讓事情變得更簡單，因為這樣更能對焦在問題上，就像這個網頁，你能快速理解我是誰做過什麼事情。</p>
+  </div>
 
-    if (shortLang === 'zh')
-      window.location.replace('/zh.html');
-    else
-      window.location.replace('/en.html');
-  </script>
+  <hr />
+
+  <div>
+    <h2>線上軟體</h2>
+    <div class="rows">
+      <div class="card">
+        <h3>Chatobtta 創易聊</h3>
+        <p>整合了視覺化工作流程設計器和人工智慧分析器的聊天機器人平台，以最大限度地發揮聊天機器人的客戶支援能力</p>
+        <p>
+          相關連結: 
+          <a href="https://chatbotta.com" target="_blank">官方網站</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Mino</h3>
+        <p>增強對話能力並將言語轉化為見解的語音筆記應用程式</p>
+        <p>
+          相關連結: 
+          <a href="https://minoai.io/" target="_blank">官方網站</a>
+          <a href="https://apps.apple.com/us/app/id6449540918" target="_blank">Apple Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.skiesoft.mino" target="_blank">Play Store</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>NCU App</h3>
+        <p>讓 NCU 校園生活更加愉快、更加團結的平台</p>
+        <p>
+          相關連結: 
+          <a href="https://ncuappteam.github.io/" target="_blank">官方網站</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>tl;dw - Too Long Don't Wait</h3>
+        <p>預測舊金山灣區急診室等待時間，Health Universe 黑客松得獎作品。</p>
+        <p>
+          相關連結: 
+          <a href="https://apps.healthuniverse.com/oop-gbj-tdp/" target="_blank">Demo</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Self-Diagnosis</h3>
+        <p>概念展示聊天機器人如何可以幫助人們了解可能患有的疾病</p>
+        <p>
+          相關連結: 
+          <a href="https://davidday.tw/self-diagnose/" target="_blank">Demo</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>MIDI-MUG</h3>
+        <p>用 MIDI 鍵盤玩音樂遊戲！開源的 Synthesia 替代品</p>
+        <p>
+          相關連結: 
+          <a href="https://github.com/daviddaytw/MIDI-MUG" target="_blank">程式碼及下載</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>PLAN-ADAM</h3>
+        <p>一款教育性網頁遊戲，讓玩家建造自己的星球並在上面進行探索</p>
+        <p>
+          相關連結: 
+          <a href="https://davidday.tw/plan-adam/" target="_blank">線上遊玩</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div>
+    <h2>開源專案</h2>
+    <div>
+      <ul>
+        <li>
+          <a href="https://davidday.tw/react-native-transformers/" target="_blank">react-native-transformers</a>:
+          讓 Huggingface 的 LLM 能夠使用 onnxruntime 在 React-Native 中運作
+        </li>
+        <li>
+          <a href="https://github.com/daviddaytw/ally-casdoor" target="_blank">ally-casdoor</a>:
+          讓 AdonisJS ally 可以用 casdoor 的 OAuth2 登入的驅動程式
+        </li>
+        <li>
+          <a href="https://github.com/daviddaytw/QNet" target="_blank">QNet</a>:
+          結合 BERT 語言模型與變分量子電路來研究量子電腦在自然語言上的優勢
+        </li>
+        <li>
+          <a href="https://github.com/daviddaytw/Registry" target="_blank">Registry</a>:
+          使用簡單的 API 來伺服資料的 Web 服務
+        </li>
+        <li>
+          <a href="https://github.com/daviddaytw/IQAC" target="_blank">IQAC</a>:
+          即時答題平台
+        </li>
+        <li>
+          <a href="https://github.com/daviddaytw/Laravel-SlackReporter" target="_blank">Laravel-SlackReporter</a>:
+          向 Slack 頻道報告網站錯誤。已棄用，因為 Laravel 6 已經整合 slack 通知。
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <hr />
+
+  <div>
+    <h2>筆記</h2>
+    <div>
+      <ul>
+        <li>
+          <a href="https://github.com/daviddaytw/davidday.tw/blob/2ed86bd662fcc99fa7cbff400b2cda1c0f368d7d/posts/media-bias/index.ipynb" target="_blank">
+            量化評估臺灣新聞媒體偏見
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 
 </html>

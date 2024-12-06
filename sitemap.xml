@@ -10,28 +10,6 @@
     <loc>https://davidday.tw/</loc>
   </url>
   <url>
-  <loc>https://davidday.tw/en.html</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh"
-      href="https://davidday.tw/zh.html" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://davidday.tw/en.html" />
-  </url>
-  <url>
-    <loc>https://davidday.tw/zh.html</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh"
-      href="https://davidday.tw/zh.html" />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://davidday.tw/en.html" />
-  </url>
-  <url>
     <loc>https://davidday.tw/facehealth</loc>
   </url>
   <url>
@@ -39,8 +17,5 @@
   </url>
   <url>
     <loc>https://davidday.tw/plan-adam</loc>
-  </url>
-  <url>
-    <loc>https://davidday.tw/react-native-transformers/</loc>
   </url>
 </urlset>
