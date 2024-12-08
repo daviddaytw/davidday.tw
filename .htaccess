@@ -1,1 +1,5 @@
 ErrorDocument 404 https://davidday.tw/
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^davidday.tw$
+RewriteRule ^(.*)$ https://davidday.tw/$1 [R=301,L]
