@@ -4,7 +4,7 @@ export interface Props {
 	description?: string;
 }
 
-const { title = "戴惟 | David Day", description = "戴惟的個人網站，21世紀發明家，喜歡讓事情變得更簡單，因為這樣更能對焦在問題上。" } = Astro.props;
+const { title = "戴惟 | David Day - 從台灣學生到矽谷創業者", description = "戴惟的創業旅程記錄，從台灣學生到舊金山創業者，專注於 AI 垂直領域應用，尋找技術真正能幫助人們生活的解決方案。探索我的專案、投資和開源貢獻。" } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,6 +22,7 @@ const { title = "戴惟 | David Day", description = "戴惟的個人網站，21�
 		<title>{title}</title>
 		<meta name="author" content="daviddaytw" />
 		<meta name="description" content={description} />
+		<meta name="keywords" content="戴惟, David Day, 創業, 台灣, 矽谷, 舊金山, AI, 人工智慧, 垂直應用, 創業家, 工程師, 投資, 開源, 專案" />
 
 		<meta property="og:title" content={title} />
 		<meta property="og:locale" content="zh-Hant" />
@@ -31,25 +32,10 @@ const { title = "戴惟 | David Day", description = "戴惟的個人網站，21�
 		<meta property="og:type" content="website" />
 		<meta name="twitter:card" content="summary" />
 		<meta property="twitter:title" content={title} />
+		<link rel="stylesheet" href="/src/styles/global.css" />
 	</head>
 	<body>
 		<slot />
+		<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 	</body>
 </html>
-
-<style>
-	body {
-		margin: auto auto;
-		max-width: 720px;
-		padding: 8px;
-	}
-	ul li {
-		line-height: 2;
-	}
-	.card {
-		flex: 1;
-		border: solid 1px;
-		margin: 4px;
-		padding: 8px;
-	}
-</style>

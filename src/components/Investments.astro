@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import chatbottaLogo from '../assets/chatbotta.png';
+import skiesoftLogo from '../assets/skiesoft.png';
+---
+
+<section>
+  <h2>🚀 我投資的未來科技</h2>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-header">
+        <Image src={chatbottaLogo} alt="Chatbotta Logo" class="company-logo" loading="eager" />
+        <h3>創易聊股份有限公司</h3>
+      </div>
+      <p>🎨 想像一下，如果聊天機器人不只會說「您好，有什麼可以幫您的嗎？」而是真的能理解你的需求！這就是創易聊在做的事 —— 用視覺化設計器讓 AI 變得更聰明，讓客服不再是惡夢。</p>
+      <p>
+        🔗 想看看魔法？ 
+        <a href="https://chatbotta.com" target="_blank">來官網瞧瞧</a>
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <Image src={skiesoftLogo} alt="Skiesoft Logo" class="company-logo" loading="eager" />
+        <h3>軟雲股份有限公司</h3>
+      </div>
+      <p>🇹🇼 終於有人做出懂台灣人說話的 AI 了！不管你說國語、台語還是英文，甚至是三種語言混著說，軟雲 AI 都聽得懂。這就是我們要的台灣 AI 基礎建設！</p>
+      <p>
+        🔗 來體驗一下： 
+        <a href="https://skiesoft.com/" target="_blank">官方網站</a>
+      </p>
+    </div>
+  </div>
+</section>

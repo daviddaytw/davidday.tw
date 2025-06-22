@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import avatar from '../assets/avatar.jpeg';
+---
+
+<div class="header-section">
+  <Image src={avatar} alt="戴惟 David Day" class="avatar" loading="eager" />
+  <div class="header-content">
+    <h1>戴惟 | David Day</h1>
+    <div class="tagline">
+      <span>從台灣學生到矽谷創業者 | 23 歲</span>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/daviddaytw/">LinkedIn</a>
+      <a href="https://www.facebook.com/weiday.tw">Facebook</a>
+      <a href="https://github.com/daviddaytw">Github</a>
+      <a href="https://twitter.com/daviddaytw">Twitter</a>
+    </div>
+  </div>
+</div>
