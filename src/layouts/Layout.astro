@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 export interface Props {
 	title?: string;
 	description?: string;
@@ -32,7 +34,6 @@ const { title = "戴惟 | David Day - 從台灣學生到矽谷創業者", descri
 		<meta property="og:type" content="website" />
 		<meta name="twitter:card" content="summary" />
 		<meta property="twitter:title" content={title} />
-		<link rel="stylesheet" href="/src/styles/global.css" />
 	</head>
 	<body>
 		<slot />
