@@ -1,0 +1,55 @@
+---
+export interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = "戴惟 | David Day", description = "戴惟的個人網站，21世紀發明家，喜歡讓事情變得更簡單，因為這樣更能對焦在問題上。" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="color-scheme" content="light dark" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<title>{title}</title>
+		<meta name="author" content="daviddaytw" />
+		<meta name="description" content={description} />
+
+		<meta property="og:title" content={title} />
+		<meta property="og:locale" content="zh-Hant" />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content="https://davidday.tw/" />
+		<meta property="og:site_name" content="davidday.tw" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary" />
+		<meta property="twitter:title" content={title} />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	body {
+		margin: auto auto;
+		max-width: 720px;
+		padding: 8px;
+	}
+	ul li {
+		line-height: 2;
+	}
+	.card {
+		flex: 1;
+		border: solid 1px;
+		margin: 4px;
+		padding: 8px;
+	}
+</style>
