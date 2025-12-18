@@ -15,7 +15,10 @@ import foundersinc from '../assets/Founders,inc.jpg';
 				<Image src={ycombinator} alt="Y Combinator" class="badge" loading="eager" />
 				<Image src={foundersinc} alt="Founders Inc" class="badge" loading="eager" />
 			</div>
-			<a href="#portfolios" class="nav-link">Portfolios →</a>
+			<div class="nav-links">
+				<a href="#portfolios" class="nav-link">Portfolios →</a>
+				<a href="/formosa" class="nav-link">Formosa →</a>
+			</div>
 		</div>
 	</div>
 
@@ -77,9 +80,15 @@ import foundersinc from '../assets/Founders,inc.jpg';
 		letter-spacing: 0.02em;
 	}
 
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+		margin-top: 2.5rem;
+		flex-wrap: wrap;
+	}
+
 	.nav-link {
 		display: inline-block;
-		margin-top: 2.5rem;
 		font-size: clamp(0.875rem, 1.5vw, 1rem);
 		font-weight: 500;
 		color: #fff;
