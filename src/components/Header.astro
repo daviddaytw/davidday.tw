@@ -1,20 +1,115 @@
 ---
 import { Image } from 'astro:assets';
-import avatar from '../assets/avatar.jpeg';
+import avatar from '../assets/avatar.jpg';
 ---
 
-<div class="header-section">
-  <Image src={avatar} alt="戴惟 David Day" class="avatar" loading="eager" />
-  <div class="header-content">
-    <h1>戴惟 | David Day</h1>
-    <div class="tagline">
-      <span>從台灣學生到矽谷創業者 | 23 歲</span>
-    </div>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/daviddaytw/" target="_blank">LinkedIn</a>
-      <a href="https://www.facebook.com/weiday.tw" target="_blank">Facebook</a>
-      <a href="https://github.com/daviddaytw" target="_blank">Github</a>
-      <a href="https://twitter.com/daviddaytw" target="_blank">Twitter</a>
-    </div>
-  </div>
+<div class="landing-container">
+	<div class="name-section">
+		<div class="name-content">
+			<h1 class="name">David Day</h1>
+			<h2 class="chinese-name">戴惟</h2>
+			<p class="tagline">從台灣學生到矽谷創業者 | 23 歲</p>
+		</div>
+	</div>
+
+	<div class="avatar-section">
+		<Image src={avatar} alt="David Day" class="avatar-image" loading="eager" />
+	</div>
 </div>
+
+<style>
+	.landing-container {
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.name-section {
+		flex: 1;
+		background: #000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4rem;
+		position: relative;
+		height: 100%;
+	}
+
+	.name-content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.name {
+		font-size: clamp(3rem, 7vw, 5rem);
+		font-weight: 300;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+		margin: 0;
+		color: #fff;
+	}
+
+	.chinese-name {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 200;
+		margin-top: 1rem;
+		color: #fff;
+		opacity: 0.8;
+	}
+
+	.tagline {
+		font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+		font-weight: 300;
+		margin-top: 1.5rem;
+		color: #fff;
+		opacity: 0.6;
+		letter-spacing: 0.02em;
+	}
+
+	.avatar-section {
+		flex: 1;
+		background: #fff;
+		display: flex;
+		align-items: stretch;
+		justify-content: stretch;
+		overflow: hidden;
+		height: 100%;
+	}
+
+	.avatar-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	@media (max-width: 768px) {
+		.landing-container {
+			flex-direction: column;
+			height: 100vh;
+		}
+
+		.name-section {
+			flex: 1;
+		}
+
+		.name-content {
+			align-items: center;
+			text-align: center;
+		}
+
+		.avatar-section {
+			flex: 1;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.avatar-section {
+			background: #000;
+		}
+	}
+</style>

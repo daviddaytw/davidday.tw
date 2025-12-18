@@ -4,30 +4,211 @@ import chatbottaLogo from '../assets/chatbotta.png';
 import skiesoftLogo from '../assets/skiesoft.png';
 ---
 
-<section>
-  <h2>🚀 我投資的未來科技</h2>
-  <div class="card-grid">
-    <div class="card">
-      <div class="card-header">
-        <Image src={chatbottaLogo} alt="Chatbotta Logo" class="company-logo" loading="eager" />
-        <h3>創易聊股份有限公司</h3>
-      </div>
-      <p>🎨 想像一下，如果聊天機器人不只會說「您好，有什麼可以幫您的嗎？」而是真的能理解你的需求！這就是創易聊在做的事 —— 用視覺化設計器讓 AI 變得更聰明，讓客服不再是惡夢。</p>
-      <p>
-        🔗 想看看魔法？ 
-        <a href="https://chatbotta.com" target="_blank">來官網瞧瞧</a>
-      </p>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <Image src={skiesoftLogo} alt="Skiesoft Logo" class="company-logo" loading="eager" />
-        <h3>軟雲股份有限公司</h3>
-      </div>
-      <p>🇹🇼 終於有人做出懂台灣人說話的 AI 了！不管你說國語、台語還是英文，甚至是三種語言混著說，軟雲 AI 都聽得懂。這就是我們要的台灣 AI 基礎建設！</p>
-      <p>
-        🔗 來體驗一下： 
-        <a href="https://skiesoft.com/" target="_blank">官方網站</a>
-      </p>
-    </div>
-  </div>
+<section class="investments-section">
+	<div class="section-container">
+		<div class="section-header">
+			<h2 class="section-title">Investments</h2>
+			<p class="section-subtitle">我投資的未來科技</p>
+		</div>
+
+		<div class="investments-grid">
+			<div class="investment-card">
+				<div class="card-content">
+					<div class="logo-wrapper">
+						<Image src={chatbottaLogo} alt="Chatbotta Logo" class="company-logo" loading="eager" />
+					</div>
+					<h3 class="company-name">創易聊股份有限公司</h3>
+					<p class="company-description">
+						想像一下，如果聊天機器人不只會說「您好，有什麼可以幫您的嗎？」而是真的能理解你的需求！這就是創易聊在做的事 —— 用視覺化設計器讓 AI 變得更聰明，讓客服不再是惡夢。
+					</p>
+					<a href="https://chatbotta.com" target="_blank" class="company-link">查看官網 →</a>
+				</div>
+			</div>
+
+			<div class="investment-card">
+				<div class="card-content">
+					<div class="logo-wrapper">
+						<Image src={skiesoftLogo} alt="Skiesoft Logo" class="company-logo" loading="eager" />
+					</div>
+					<h3 class="company-name">軟雲股份有限公司</h3>
+					<p class="company-description">
+						終於有人做出懂台灣人說話的 AI 了！不管你說國語、台語還是英文，甚至是三種語言混著說，軟雲 AI 都聽得懂。這就是我們要的台灣 AI 基礎建設！
+					</p>
+					<a href="https://skiesoft.com/" target="_blank" class="company-link">查看官網 →</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
+
+<style>
+	.investments-section {
+		min-height: 100vh;
+		background: #000;
+		color: #fff;
+		padding: 6rem 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.section-container {
+		max-width: 1400px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.section-header {
+		margin-bottom: 5rem;
+		border-bottom: 2px solid #fff;
+		padding-bottom: 2rem;
+	}
+
+	.section-title {
+		font-size: clamp(3rem, 6vw, 5rem);
+		font-weight: 300;
+		letter-spacing: -0.03em;
+		line-height: 1;
+		margin: 0 0 0.5rem 0;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	.section-subtitle {
+		font-size: clamp(1.125rem, 2.5vw, 1.75rem);
+		font-weight: 200;
+		color: #fff;
+		opacity: 0.7;
+		margin: 0;
+		letter-spacing: 0.05em;
+	}
+
+	.investments-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 3rem;
+	}
+
+	.investment-card {
+		background: #000;
+		border: 2px solid #fff;
+		overflow: hidden;
+		transition: all 0.2s ease;
+		position: relative;
+	}
+
+	.investment-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #fff;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		transition: transform 0.3s ease;
+		z-index: 0;
+	}
+
+	.investment-card:hover::before {
+		transform: scaleY(1);
+		transform-origin: top;
+	}
+
+	.investment-card:hover {
+		border-color: #000;
+	}
+
+	.investment-card:hover .card-content,
+	.investment-card:hover .company-name,
+	.investment-card:hover .company-description,
+	.investment-card:hover .company-link {
+		color: #000;
+	}
+
+	.card-content {
+		padding: 3rem;
+		position: relative;
+		z-index: 1;
+		transition: color 0.3s ease;
+	}
+
+	.logo-wrapper {
+		width: 100px;
+		height: 100px;
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid #fff;
+		background: #fff;
+		transition: border-color 0.3s ease;
+	}
+
+	.investment-card:hover .logo-wrapper {
+		border-color: #000;
+	}
+
+	.company-logo {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		padding: 0.5rem;
+	}
+
+	.company-name {
+		font-size: 1.75rem;
+		font-weight: 700;
+		margin: 0 0 1.5rem 0;
+		color: #fff;
+		letter-spacing: -0.02em;
+		transition: color 0.3s ease;
+	}
+
+	.company-description {
+		font-size: 1.125rem;
+		line-height: 1.7;
+		color: #fff;
+		opacity: 0.9;
+		margin: 0 0 2rem 0;
+		transition: color 0.3s ease;
+	}
+
+	.company-link {
+		display: inline-block;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		border-bottom: 2px solid #fff;
+		padding-bottom: 0.25rem;
+		transition: all 0.3s ease;
+	}
+
+	.investment-card:hover .company-link {
+		color: #000;
+		border-bottom-color: #000;
+	}
+
+	@media (max-width: 768px) {
+		.investments-section {
+			padding: 4rem 1.5rem;
+		}
+
+		.section-header {
+			margin-bottom: 3rem;
+		}
+
+		.investments-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.card-content {
+			padding: 2rem;
+		}
+	}
+</style>
