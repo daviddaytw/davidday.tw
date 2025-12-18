@@ -60,7 +60,6 @@ ul { list-style: none; }
 ul li { margin-bottom: 1.25rem; padding: 0.75rem 0; border-bottom: 1px solid var(--color-border-light); }
 
 @media (max-width: 768px) {
-  body { padding: var(--spacing-lg) var(--spacing-md); }
   .header-section { flex-direction: column; }
   .card-grid { grid-template-columns: 1fr; }
 }
