@@ -312,7 +312,7 @@ import Layout from '../layouts/Layout.astro';
 		background: #000;
 		border: 1px solid #fff;
 		padding: 2rem;
-		transition: all 0.3s ease;
+		transition: background-color 0.3s ease, border-color 0.3s ease;
 	}
 
 	.life-card:hover {
@@ -402,7 +402,7 @@ import Layout from '../layouts/Layout.astro';
 		letter-spacing: 0.1em;
 		border-bottom: 2px solid #fff;
 		padding-bottom: 0.5rem;
-		transition: all 0.3s ease;
+		transition: opacity 0.3s ease, transform 0.3s ease;
 		opacity: 0.9;
 	}
 
@@ -413,6 +413,7 @@ import Layout from '../layouts/Layout.astro';
 		padding: 1rem 2rem;
 		border-radius: 0;
 		opacity: 1;
+		transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 	}
 
 	.contact-link.primary:hover {
@@ -427,6 +428,14 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	@media (max-width: 1024px) {
+		.formosa-section {
+			padding: 5rem 2rem;
+		}
+
+		.section-container {
+			padding: 0 2rem;
+		}
+
 		.life-grid {
 			grid-template-columns: 1fr;
 		}
@@ -446,7 +455,7 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.content-grid {
-			gap: 3rem;
+			gap: 2.5rem;
 		}
 
 		.life-card {
@@ -460,11 +469,12 @@ import Layout from '../layouts/Layout.astro';
 		.vision-icon {
 			font-size: 1.5rem;
 		}
-	}
 
-	@media (prefers-color-scheme: dark) {
-		.formosa-page {
-			background: #000;
+		.story-block,
+		.vision-block,
+		.life-block,
+		.community-block {
+			padding: 2rem 0;
 		}
 	}
 </style>

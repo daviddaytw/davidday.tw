@@ -17,7 +17,7 @@ import parseLogo from '../assets/parse.png';
 			<div class="portfolio-card">
 				<div class="card-content">
 					<div class="logo-wrapper">
-						<Image src={skiesoftLogo} alt="Skiesoft Logo" class="company-logo" loading="eager" />
+						<Image src={skiesoftLogo} alt="Skiesoft Logo" class="company-logo" loading="lazy" />
 					</div>
 					<div class="company-header">
 						<h3 class="company-name">軟雲股份有限公司</h3>
@@ -30,7 +30,7 @@ import parseLogo from '../assets/parse.png';
 			<div class="portfolio-card">
 				<div class="card-content">
 					<div class="logo-wrapper">
-						<Image src={chatbottaLogo} alt="Chatbotta Logo" class="company-logo" loading="eager" />
+						<Image src={chatbottaLogo} alt="Chatbotta Logo" class="company-logo" loading="lazy" />
 					</div>
 					<div class="company-header">
 						<h3 class="company-name">創易聊股份有限公司</h3>
@@ -43,7 +43,7 @@ import parseLogo from '../assets/parse.png';
 			<div class="portfolio-card">
 				<div class="card-content">
 					<div class="logo-wrapper">
-						<Image src={lunabillLogo} alt="LunaBill Logo" class="company-logo" loading="eager" />
+						<Image src={lunabillLogo} alt="LunaBill Logo" class="company-logo" loading="lazy" />
 					</div>
 					<div class="company-header">
 						<h3 class="company-name">LunaBill</h3>
@@ -56,7 +56,7 @@ import parseLogo from '../assets/parse.png';
 			<div class="portfolio-card">
 				<div class="card-content">
 					<div class="logo-wrapper">
-						<Image src={parseLogo} alt="Parse Logo" class="company-logo" loading="eager" />
+						<Image src={parseLogo} alt="Parse Logo" class="company-logo" loading="lazy" />
 					</div>
 					<div class="company-header">
 						<h3 class="company-name">Parse</h3>
@@ -122,7 +122,7 @@ import parseLogo from '../assets/parse.png';
 		background: #000;
 		border: 1px solid #fff;
 		padding: 2.5rem;
-		transition: all 0.3s ease;
+		transition: background-color 0.3s ease, border-color 0.3s ease;
 		position: relative;
 	}
 
@@ -199,7 +199,7 @@ import parseLogo from '../assets/parse.png';
 		background: #fff;
 		color: #000;
 		border: 1px solid #fff;
-		transition: all 0.3s ease;
+		transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 	}
 
 	.company-link {
@@ -211,7 +211,7 @@ import parseLogo from '../assets/parse.png';
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		opacity: 0.8;
-		transition: all 0.3s ease;
+		transition: opacity 0.3s ease, color 0.3s ease;
 	}
 
 	.company-link:hover {
@@ -220,6 +220,16 @@ import parseLogo from '../assets/parse.png';
 
 	.portfolio-card:hover .company-link {
 		color: #000;
+	}
+
+	@media (max-width: 1024px) {
+		.section-container {
+			padding: 5rem 3rem;
+		}
+
+		.portfolios-grid {
+			gap: 1.5rem;
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -243,12 +253,6 @@ import parseLogo from '../assets/parse.png';
 		.logo-wrapper {
 			width: 60px;
 			height: 60px;
-		}
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.portfolios-section {
-			background: #000;
 		}
 	}
 </style>

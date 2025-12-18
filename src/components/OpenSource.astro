@@ -104,7 +104,6 @@
 		background: #000;
 		border-top: 2px solid #fff;
 		overflow: hidden;
-		transition: all 0.2s ease;
 		position: relative;
 	}
 
@@ -144,7 +143,7 @@
 		z-index: 1;
 		transition: color 0.3s ease;
 		display: grid;
-		grid-template-columns: 450px 1fr;
+		grid-template-columns: minmax(300px, 450px) 1fr;
 		gap: 3rem;
 		align-items: flex-start;
 	}
@@ -181,8 +180,12 @@
 	}
 
 	@media (max-width: 1024px) {
+		.section-container {
+			padding: 0 2rem;
+		}
+
 		.project-content {
-			flex-direction: column;
+			grid-template-columns: 1fr;
 			gap: 1.5rem;
 		}
 
@@ -207,6 +210,10 @@
 	@media (max-width: 768px) {
 		.opensource-section {
 			padding: 4rem 1.5rem;
+		}
+
+		.section-container {
+			padding: 0 1rem;
 		}
 
 		.section-header {

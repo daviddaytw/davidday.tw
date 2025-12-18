@@ -12,8 +12,8 @@ import foundersinc from '../assets/Founders,inc.jpg';
 			<h2 class="chinese-name">戴惟</h2>
 			<p class="tagline">從台灣學生到矽谷創業者 | 23 歲</p>
 			<div class="badges">
-				<Image src={ycombinator} alt="Y Combinator" class="badge" loading="eager" />
-				<Image src={foundersinc} alt="Founders Inc" class="badge" loading="eager" />
+				<Image src={ycombinator} alt="Y Combinator" class="badge" loading="lazy" />
+				<Image src={foundersinc} alt="Founders Inc" class="badge" loading="lazy" />
 			</div>
 			<div class="nav-links">
 				<a href="#portfolios" class="nav-link">Portfolios →</a>
@@ -30,7 +30,7 @@ import foundersinc from '../assets/Founders,inc.jpg';
 <style>
 	.landing-container {
 		height: 100vh;
-		width: 100vw;
+		width: 100%;
 		display: flex;
 		margin: 0;
 		padding: 0;
@@ -97,14 +97,13 @@ import foundersinc from '../assets/Founders,inc.jpg';
 		text-transform: uppercase;
 		border-bottom: 2px solid #fff;
 		padding-bottom: 0.5rem;
-		transition: all 0.3s ease;
+		transition: opacity 0.3s ease, transform 0.3s ease;
 		opacity: 0.8;
 	}
 
 	.nav-link:hover {
 		opacity: 1;
 		transform: translateX(4px);
-		border-bottom-color: #fff;
 	}
 
 	.badges {
@@ -148,6 +147,7 @@ import foundersinc from '../assets/Founders,inc.jpg';
 
 		.name-section {
 			flex: 1;
+			padding: 2rem;
 		}
 
 		.name-content {
@@ -165,12 +165,6 @@ import foundersinc from '../assets/Founders,inc.jpg';
 
 		.badge {
 			height: 50px;
-		}
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.avatar-section {
-			background: #000;
 		}
 	}
 </style>
