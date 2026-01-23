@@ -7,5 +7,8 @@ import robotsTxt from 'astro-robots-txt';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://davidday.tw',
-  integrations: [sitemap(), robotsTxt()]
+  integrations: [sitemap(), robotsTxt()],
+  redirects: {
+    '/formosa': '/residency'
+  }
 });
