@@ -9,6 +9,7 @@ import housePhoto from '../assets/619_oak.jpg';
 >
 	<section class="hero" style={`background-image: url(${housePhoto.src})`}>
 		<div class="hero-overlay">
+			<a href="/" class="founder-link">Founded by David Day</a>
 			<header class="header">
 				<p class="eyebrow">San Francisco · Lower Haight</p>
 				<h1>Formosa<br/>Founders House</h1>
@@ -233,6 +234,22 @@ import housePhoto from '../assets/619_oak.jpg';
 		justify-content: center;
 		text-align: center;
 		padding: 0 2rem;
+	}
+
+	.founder-link {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		color: rgba(255, 255, 255, 0.9);
+		text-decoration: none;
+		font-size: 0.75rem;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		transition: color 0.2s ease;
+	}
+
+	.founder-link:hover {
+		color: #fff;
 	}
 
 	.header {
