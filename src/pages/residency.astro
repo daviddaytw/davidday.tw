@@ -1,18 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import housePhoto from '../assets/619_oak.jpg';
 ---
 
 <Layout
 	title="Formosa Founders House"
 	description="舊金山的台灣創業者之家, A Taiwanese Founder House in San Francisco"
 >
-	<section class="page">
-		<div class="container">
+	<section class="hero" style={`background-image: url(${housePhoto.src})`}>
+		<div class="hero-overlay">
 			<header class="header">
-				<h1>Formosa Founders House</h1>
+				<p class="eyebrow">San Francisco · Lower Haight</p>
+				<h1>Formosa<br/>Founders House</h1>
 				<p class="subtitle">The home and harbor for Taiwanese founders in San Francisco</p>
 			</header>
+		</div>
+		<div class="scroll-hint">
+			<span>Scroll</span>
+			<div class="scroll-line"></div>
+		</div>
+	</section>
 
+	<section class="page">
+		<div class="container">
 			<div class="content">
 				<div class="block">
 					<h2>What Is This Place / 這是什麼地方</h2>
@@ -155,6 +165,36 @@ import Layout from '../layouts/Layout.astro';
 					</p>
 				</div>
 
+				<div class="block">
+					<h2>Location / 地點</h2>
+					<div class="location-layout">
+						<div class="location-info">
+							<p>
+								<strong>619 Oak Street, San Francisco, CA</strong>
+							</p>
+							<p>
+								Lower Haight 社區 — 步行可到 Duboce Park、Castro、Hayes Valley。
+								Muni 輕鐵和公車都很方便，去 SoMa、Mission、Downtown 輕鬆搞定。
+							</p>
+							<p>
+								Walking distance to Duboce Park, Castro, and Hayes Valley. Easy Muni access to SoMa, Mission, and Downtown SF.
+							</p>
+						</div>
+						<div class="map-embed">
+							<iframe
+								src="https://maps.google.com/maps?q=619+Oak+St,+San+Francisco,+CA+94117&output=embed&z=15"
+								width="100%"
+								height="350"
+								style="border:0;"
+								allowfullscreen=""
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+								title="Formosa Founders House location"
+							></iframe>
+						</div>
+					</div>
+				</div>
+
 				<div class="block cta">
 					<h2>Want to Join? / 想加入嗎？</h2>
 					<p>
@@ -169,14 +209,97 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-	.page {
-		min-height: 100vh;
-		background: #000;
+	.hero {
+		position: relative;
+		height: 100vh;
+		min-height: 560px;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 		color: #fff;
-		padding: 6rem 2rem;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.25) 0%,
+			rgba(0, 0, 0, 0.45) 50%,
+			rgba(0, 0, 0, 0.8) 100%
+		);
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
+		padding: 0 2rem;
+	}
+
+	.header {
+		max-width: 760px;
+	}
+
+	.eyebrow {
+		font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+		font-weight: 400;
+		letter-spacing: 0.25em;
+		text-transform: uppercase;
+		opacity: 0.7;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.header h1 {
+		font-size: clamp(3rem, 7vw, 6rem);
+		font-weight: 300;
+		letter-spacing: -0.02em;
+		line-height: 1.05;
+		margin: 0 0 2rem 0;
+	}
+
+	.subtitle {
+		font-size: clamp(1rem, 1.8vw, 1.25rem);
+		font-weight: 300;
+		margin: 0;
+		letter-spacing: 0.03em;
+		opacity: 0.8;
+		font-style: italic;
+	}
+
+	.scroll-hint {
+		position: absolute;
+		bottom: 2.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+		opacity: 0.5;
+	}
+
+	.scroll-hint span {
+		font-size: 0.7rem;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	.scroll-line {
+		width: 1px;
+		height: 48px;
+		background: linear-gradient(to bottom, #fff, transparent);
+		animation: scrollPulse 2s ease-in-out infinite;
+	}
+
+	@keyframes scrollPulse {
+		0%, 100% { opacity: 0.5; transform: scaleY(1); }
+		50% { opacity: 1; transform: scaleY(0.6); }
+	}
+
+	.page {
+		background: #000;
+		color: #fff;
+		padding: 6rem 2rem;
 	}
 
 	.container {
@@ -184,28 +307,6 @@ import Layout from '../layouts/Layout.astro';
 		width: 100%;
 		margin: 0 auto;
 		padding: 0 3rem;
-	}
-
-	.header {
-		margin-bottom: 5rem;
-		border-bottom: 2px solid #fff;
-		padding-bottom: 2rem;
-	}
-
-	.header h1 {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		font-weight: 300;
-		letter-spacing: -0.02em;
-		line-height: 1.1;
-		margin: 0 0 1rem 0;
-	}
-
-	.subtitle {
-		font-size: clamp(1.125rem, 2vw, 1.5rem);
-		font-weight: 300;
-		margin: 0;
-		letter-spacing: 0.02em;
-		font-style: italic;
 	}
 
 	.content {
@@ -327,7 +428,36 @@ import Layout from '../layouts/Layout.astro';
 		transform: translateX(8px);
 	}
 
+	.location-layout {
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		gap: 3rem;
+		margin-top: 2rem;
+		align-items: start;
+	}
+
+	.location-info p {
+		font-size: clamp(1rem, 1.5vw, 1.25rem);
+		line-height: 1.7;
+		margin: 0 0 1.25rem 0;
+		font-weight: 300;
+	}
+
+	.map-embed {
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		overflow: hidden;
+	}
+
+	.map-embed iframe {
+		display: block;
+		filter: grayscale(40%) invert(90%) contrast(90%);
+	}
+
 	@media (max-width: 1024px) {
+		.hero-overlay {
+			padding: 0 3rem;
+		}
+
 		.page {
 			padding: 5rem 2rem;
 		}
@@ -339,19 +469,33 @@ import Layout from '../layouts/Layout.astro';
 		.grid {
 			grid-template-columns: 1fr;
 		}
+
+		.location-layout {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
 	}
 
 	@media (max-width: 768px) {
+		.hero {
+			background-attachment: scroll;
+			min-height: 480px;
+		}
+
+		.hero-overlay {
+			padding: 0 1.5rem;
+		}
+
+		.scroll-hint {
+			display: none;
+		}
+
 		.page {
 			padding: 4rem 1.5rem;
 		}
 
 		.container {
 			padding: 0 1rem;
-		}
-
-		.header {
-			margin-bottom: 3rem;
 		}
 
 		.content {
