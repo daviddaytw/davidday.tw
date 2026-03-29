@@ -3,9 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import OpenSource from '../components/OpenSource.astro';
 import Portfolios from '../components/Portfolios.astro';
+import { getImage } from 'astro:assets';
+import avatar from '../assets/avatar.jpg';
+
+const ogImage = await getImage({ src: avatar, width: 1200, height: 630, fit: 'cover', position: 'top' });
 ---
 
-<Layout>
+<Layout image={ogImage.src}>
 	<Header />
 	<Portfolios />
 	<OpenSource />
