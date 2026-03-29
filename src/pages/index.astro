@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import OpenSource from '../components/OpenSource.astro';
 import Portfolios from '../components/Portfolios.astro';
+import Footer from '../components/Footer.astro';
 import { getImage } from 'astro:assets';
 import avatar from '../assets/avatar.jpg';
 
@@ -13,4 +14,5 @@ const ogImage = await getImage({ src: avatar, width: 1200, height: 630, fit: 'co
 	<Header />
 	<Portfolios />
 	<OpenSource />
+	<Footer />
 </Layout>
