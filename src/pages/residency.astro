@@ -8,14 +8,17 @@ import housePhoto from '../assets/619_oak.jpg';
 	description="舊金山的台灣創業者之家, A Taiwanese Founder House in San Francisco"
 	image={housePhoto.src}
 >
-	<section class="hero" style={`background-image: url(${housePhoto.src})`}>
+
+	<!-- Hero: full-bleed photo, Ken Burns, text centered -->
+	<section class="hero">
+		<div class="hero-photo" style={`background-image: url(${housePhoto.src})`}></div>
 		<div class="hero-overlay">
 			<a href="/" class="founder-link">Founded by David Day</a>
-			<header class="header">
+			<div class="hero-content">
 				<p class="eyebrow">San Francisco · Lower Haight</p>
 				<h1>Formosa<br/>Founders House</h1>
 				<p class="subtitle">The home and harbor for Taiwanese founders in San Francisco</p>
-			</header>
+			</div>
 		</div>
 		<div class="scroll-hint">
 			<span>Scroll</span>
@@ -23,202 +26,231 @@ import housePhoto from '../assets/619_oak.jpg';
 		</div>
 	</section>
 
-	<section class="page">
-		<div class="container">
-			<div class="content">
-				<div class="block">
-					<h2>What Is This Place / 這是什麼地方</h2>
-					<p>
-						Formosa Founders House is a hacker house in San Francisco where Taiwanese startup founders live together under one roof. Think of it as a shared home where you don't just get a room — you get direct access to experienced founders, their networks, and the Silicon Valley ecosystem.
-					</p>
-					<p>
-						Formosa Founders House 是台灣創業者的 hacker house — 一個實際住在一起的共居空間。你不只是租一個房間，而是加入一個由創業者組成的家，直接連結到矽谷的人脈和資源。
-					</p>
-				</div>
+	<!-- Editorial sections -->
+	<main class="editorial">
 
-				<div class="block">
-					<h2>What We Offer / 我們提供什麼</h2>
-					<div class="list">
-						<div class="item">
-							<span class="icon">🏠</span>
-							<p>
-								<strong>Live with proven founders</strong> — Your housemates are YC founders and founders backed by 500 Global and other top VCs
-								<br>你的室友是 YC 和 500 Global 等頂級 VC 投資的創業者
-							</p>
-						</div>
-						<div class="item">
-							<span class="icon">🚀</span>
-							<p>
-								<strong>Learn from those who've done it</strong> — How to fundraise, find your first customers, navigate Silicon Valley
-								<br>直接學習如何 fundraise、找客戶、在矽谷生存
-							</p>
-						</div>
-						<div class="item">
-							<span class="icon">🤝</span>
-							<p>
-								<strong>Get intros that matter</strong> — Access to investors, advisors, and other founders through your housemates' networks
-								<br>透過室友的人脈接觸到投資人和重要資源
-							</p>
-						</div>
-						<div class="item">
-							<span class="icon">⚡</span>
-							<p>
-								<strong>Move fast</strong> — What takes others a year to figure out, you'll learn in weeks through daily conversations
-								<br>別人花一年摸索的事，你幾週就懂
-							</p>
-						</div>
-						<div class="item">
-							<span class="icon">🍲</span>
-							<p>
-								<strong>Feel at home</strong> — Hot pot parties, tea eggs in the fridge, Mid-Autumn BBQ — familiar comfort while building in a foreign country
-								<br>火鍋、茶葉蛋、中秋烤肉——在異鄉也有家的感覺
-							</p>
+		<div class="ed-section">
+			<div class="ed-label">
+				<span class="ed-name">What Is This Place</span>
+			</div>
+			<div class="ed-content">
+				<p>Formosa Founders House is a hacker house in San Francisco where Taiwanese startup founders live together under one roof. Think of it as a shared home where you don't just get a room — you get direct access to experienced founders, their networks, and the Silicon Valley ecosystem.</p>
+				<p>Formosa Founders House 是台灣創業者的 hacker house — 一個實際住在一起的共居空間。你不只是租一個房間，而是加入一個由創業者組成的家，直接連結到矽谷的人脈和資源。</p>
+			</div>
+		</div>
+
+		<div class="ed-section">
+			<div class="ed-label">
+				<span class="ed-name">What We Offer</span>
+			</div>
+			<div class="ed-content">
+				<div class="offer-list">
+					<div class="offer-item">
+						<span class="offer-mark">—</span>
+						<div>
+							<strong>Live with proven founders</strong>
+							<p>你的室友是 YC 和 500 Global 等頂級 VC 投資的創業者</p>
 						</div>
 					</div>
-				</div>
-
-				<div class="block">
-					<h2>Why It Matters / 為什麼重要</h2>
-					<p>
-						台灣創業者來舊金山很辛苦。這裡的創業圈子很緊密，但要打進去很難——尤其是語言和文化障礙。
-					</p>
-					<p>
-						大部分人花一年以上才搞清楚這裡怎麼運作，燒錢燒時間，還感到孤立無援。
-					</p>
-					<p>
-						Formosa House 直接讓你和走過類似的路、或正在走同樣的路的人住在一起。你不需要慢慢 network ——你已經在裡面了。
-					</p>
-				</div>
-
-				<div class="block">
-					<h2>Daily Life / 日常生活</h2>
-					<div class="grid">
-						<div class="card">
-							<h3>工作日</h3>
-							<p>
-								各自出門工作或在家 deep work。沒有規定，沒有壓力。
-								偶爾在廚房遇到，聊聊最近在做什麼、遇到什麼困難。
-							</p>
-						</div>
-						<div class="card">
-							<h3>晚餐時光</h3>
-							<p>
-								有人煮飯就一起吃，沒人煮就各自解決或一起叫外賣。
-								不強制，但總有機會坐下來，聊聊今天發生的事。
-							</p>
-						</div>
-						<div class="card">
-							<h3>週末聚會</h3>
-							<p>
-								有時候會辦個小型聚會，邀請其他在矽谷的台灣創業者。
-								分享經驗、互相幫忙、或純粹認識新朋友。
-							</p>
-						</div>
-						<div class="card">
-							<h3>互相支持</h3>
-							<p>
-								Demo day 前幫忙練習、募資時給建議、失落時有人聽你說話。
-								不是導師關係，而是同在創業路上的夥伴。
-							</p>
+					<div class="offer-item">
+						<span class="offer-mark">—</span>
+						<div>
+							<strong>Learn from those who've done it</strong>
+							<p>直接學習如何 fundraise、找客戶、在矽谷生存</p>
 						</div>
 					</div>
-				</div>
-
-				<div class="block">
-					<h2>Who Thrives Here / 什麼樣的人會喜歡這裡</h2>
-					<div class="list">
-						<div class="item">
-							<h3>你正在 Build 東西</h3>
-							<p>
-								創業、開源專案、研究、創作、認真的 side project——我們歡迎所有 builders。
-								我們看重的是你的熱情和你正在做的事，而不是你的 title 或背景。
-								如果你有想法、有作品、有原型，我們很想認識你。
-							</p>
-						</div>
-						<div class="item">
-							<h3>你對自己有期待</h3>
-							<p>
-								你知道自己要什麼，也願意為此努力。
-								你是自我驅動的——不需要別人督促，因為你本來就熱愛你在做的事。
-								我們一起創造一個充滿能量和動力的環境。
-							</p>
-						</div>
-						<div class="item">
-							<h3>你相信互相幫助</h3>
-							<p>
-								這個社群的魔力來自於每個人的付出與分享。
-								煮飯、辦活動、介紹人脈、分享經驗——當你有能力的時候，自然會想要回饋。
-								我們相信 pay it forward，讓這個家越來越好。
-							</p>
+					<div class="offer-item">
+						<span class="offer-mark">—</span>
+						<div>
+							<strong>Get intros that matter</strong>
+							<p>透過室友的人脈接觸到投資人和重要資源</p>
 						</div>
 					</div>
-				</div>
-
-				<div class="block">
-					<h2>Rent & Amenities / 租金與設施</h2>
-					<p>
-						<strong>Expected monthly rent: USD 1,500–2,000</strong>
-					</p>
-					<p>
-						Our goal is to create a living environment that allows founders to focus fully on their work. To support this, the rent will include shared services and amenities, such as regular professional cleaning, as well as other arrangements that will be finalized with the incoming residents.
-					</p>
-					<p>
-						我們的目標是創造一個讓創業者能夠全心投入工作的生活環境。為了支持這個目標，租金將包含共享服務和設施，例如定期的專業清潔，以及其他將與入住居民一起確定的安排。
-					</p>
-				</div>
-
-				<div class="block">
-					<h2>Location / 地點</h2>
-					<div class="location-layout">
-						<div class="location-info">
-							<p>
-								<strong>619 Oak Street, San Francisco, CA</strong>
-							</p>
-							<p>
-								Lower Haight 社區 — 步行可到 Duboce Park、Castro、Hayes Valley。
-								Muni 輕鐵和公車都很方便，去 SoMa、Mission、Downtown 輕鬆搞定。
-							</p>
-							<p>
-								Walking distance to Duboce Park, Castro, and Hayes Valley. Easy Muni access to SoMa, Mission, and Downtown SF.
-							</p>
-						</div>
-						<div class="map-embed">
-							<iframe
-								src="https://maps.google.com/maps?q=619+Oak+St,+San+Francisco,+CA+94117&output=embed&z=15"
-								width="100%"
-								height="350"
-								style="border:0;"
-								allowfullscreen=""
-								loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"
-								title="Formosa Founders House location"
-							></iframe>
+					<div class="offer-item">
+						<span class="offer-mark">—</span>
+						<div>
+							<strong>Move fast</strong>
+							<p>別人花一年摸索的事，你幾週就懂</p>
 						</div>
 					</div>
-				</div>
-
-				<div class="block cta">
-					<h2>Want to Join? / 想加入嗎？</h2>
-					<p>
-						如果你符合上面的描述，而且是台灣創業者，正在或即將來舊金山，
-						歡迎填寫表單讓我們認識你。我們會跟你聊聊，看看彼此是否適合。
-					</p>
-					<a href="https://forms.gle/Mk6ZZzWXZJZMMeNW7" target="_blank" rel="noopener noreferrer" class="button" data-simple-event="residency_apply">填寫申請表單 →</a>
+					<div class="offer-item">
+						<span class="offer-mark">—</span>
+						<div>
+							<strong>Feel at home</strong>
+							<p>火鍋、茶葉蛋、中秋烤肉——在異鄉也有家的感覺</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="ed-section">
+			<div class="ed-label">
+				<span class="ed-name">Why It Matters</span>
+			</div>
+			<div class="ed-content">
+				<p>台灣創業者來舊金山很辛苦。這裡的創業圈子很緊密，但要打進去很難——尤其是語言和文化障礙。</p>
+				<p>大部分人花一年以上才搞清楚這裡怎麼運作，燒錢燒時間，還感到孤立無援。</p>
+				<p>Formosa House 直接讓你和走過類似的路、或正在走同樣的路的人住在一起。你不需要慢慢 network ——你已經在裡面了。</p>
+			</div>
+		</div>
+
+		<div class="ed-section">
+			<div class="ed-label">
+				<span class="ed-name">Who Thrives Here</span>
+			</div>
+			<div class="ed-content">
+				<div class="thrive-list">
+					<div class="thrive-item">
+						<h3>你正在 Build 東西</h3>
+						<p>創業、開源專案、研究、創作、認真的 side project——我們歡迎所有 builders。我們看重的是你的熱情和你正在做的事，而不是你的 title 或背景。</p>
+					</div>
+					<div class="thrive-item">
+						<h3>你對自己有期待</h3>
+						<p>你知道自己要什麼，也願意為此努力。你是自我驅動的——不需要別人督促，因為你本來就熱愛你在做的事。</p>
+					</div>
+					<div class="thrive-item">
+						<h3>你相信互相幫助</h3>
+						<p>這個社群的魔力來自於每個人的付出與分享。煮飯、辦活動、介紹人脈、分享經驗——當你有能力的時候，自然會想要回饋。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ed-section">
+			<div class="ed-label">
+				<span class="ed-name">Daily Life</span>
+			</div>
+			<div class="ed-content">
+				<div class="life-grid">
+					<div class="life-card">
+						<h3>工作日</h3>
+						<p>各自出門工作或在家 deep work。沒有規定，沒有壓力。偶爾在廚房遇到，聊聊最近在做什麼、遇到什麼困難。</p>
+					</div>
+					<div class="life-card">
+						<h3>晚餐時光</h3>
+						<p>有人煮飯就一起吃，沒人煮就各自解決或一起叫外賣。不強制，但總有機會坐下來，聊聊今天發生的事。</p>
+					</div>
+					<div class="life-card">
+						<h3>週末聚會</h3>
+						<p>有時候會辦個小型聚會，邀請其他在矽谷的台灣創業者。分享經驗、互相幫忙、或純粹認識新朋友。</p>
+					</div>
+					<div class="life-card">
+						<h3>互相支持</h3>
+						<p>Demo day 前幫忙練習、募資時給建議、失落時有人聽你說話。不是導師關係，而是同在創業路上的夥伴。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ed-section">
+			<div class="ed-label">
+				<span class="ed-name">House Rules</span>
+			</div>
+			<div class="ed-content">
+				<div class="rules-list">
+					<div class="rule-item">
+						<span class="rule-num">I</span>
+						<div>
+							<h3>Bet on yourself.</h3>
+							<p>創業就是押注自己。不要等完美時機，不要等別人點頭，不要等準備好了再開始。Execution is everything — 想法沒有價值，執行才有。</p>
+						</div>
+					</div>
+					<div class="rule-item">
+						<span class="rule-num">II</span>
+						<div>
+							<h3>Talk about what works.</h3>
+							<p>我們這裡不批評、不抱怨。當你遇到問題，帶著你的解法來找人討論——Solution-oriented 是我們的文化。</p>
+						</div>
+					</div>
+					<div class="rule-item">
+						<span class="rule-num">III</span>
+						<div>
+							<h3>No ego at the door.</h3>
+							<p>不管你是 pre-idea 還是 post-Series A，在這裡大家都是平等的。每個人都有值得學習的地方。把 status 留在門外。</p>
+						</div>
+					</div>
+					<div class="rule-item">
+						<span class="rule-num">IV</span>
+						<div>
+							<h3>Default to action.</h3>
+							<p>卡住的時候，選一個方向，動起來。你從行動中學到的，永遠比從猶豫中多。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ed-section">
+			<div class="ed-label">
+				<span class="ed-name">Rent & Amenities</span>
+			</div>
+			<div class="ed-content">
+				<p class="rent-price">USD 1,500–2,000 <span>/ month</span></p>
+				<p>Our goal is to create a living environment that allows founders to focus fully on their work. Rent includes shared services such as regular professional cleaning and other arrangements finalized with incoming residents.</p>
+			</div>
+		</div>
+
+		<div class="ed-section">
+			<div class="ed-label">
+				<span class="ed-name">Location</span>
+			</div>
+			<div class="ed-content">
+				<p><strong>619 Oak Street, San Francisco, CA</strong></p>
+				<p>Lower Haight — walking distance to Duboce Park, Castro, and Hayes Valley. Easy Muni access to SoMa, Mission, and Downtown SF.</p>
+				<div class="map-embed">
+					<iframe
+						src="https://maps.google.com/maps?q=619+Oak+St,+San+Francisco,+CA+94117&output=embed&z=15"
+						width="100%"
+						height="300"
+						style="border:0;"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						title="Formosa Founders House location"
+					></iframe>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<section class="cta">
+		<div class="cta-inner">
+			<p class="cta-eyebrow">Want to Join?</p>
+			<p class="cta-body">
+				如果你是台灣創業者，正在或即將來舊金山，<br/>
+				歡迎填寫表單讓我們認識你。<br/>
+				我們會跟你聊聊，看看彼此是否適合。
+			</p>
+			<a
+				href="https://forms.gle/Mk6ZZzWXZJZMMeNW7"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="cta-button"
+				data-simple-event="residency_apply"
+			>填寫申請表單</a>
+		</div>
 	</section>
+
 </Layout>
 
 <style>
+	/* ─── Hero ───────────────────────────────────────────── */
+
 	.hero {
 		position: relative;
 		height: 100vh;
 		min-height: 560px;
+		overflow: hidden;
+		background: #000;
+	}
+
+	.hero-photo {
+		position: absolute;
+		inset: 0;
 		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		color: #fff;
+		background-position: center top;
 	}
 
 	.hero-overlay {
@@ -226,9 +258,9 @@ import housePhoto from '../assets/619_oak.jpg';
 		inset: 0;
 		background: linear-gradient(
 			to bottom,
-			rgba(0, 0, 0, 0.25) 0%,
-			rgba(0, 0, 0, 0.45) 50%,
-			rgba(0, 0, 0, 0.8) 100%
+			rgba(0, 0, 0, 0.15) 0%,
+			rgba(0, 0, 0, 0.4) 50%,
+			rgba(0, 0, 0, 0.75) 100%
 		);
 		display: flex;
 		align-items: center;
@@ -240,47 +272,50 @@ import housePhoto from '../assets/619_oak.jpg';
 	.founder-link {
 		position: absolute;
 		top: 2rem;
-		left: 2rem;
-		color: rgba(255, 255, 255, 0.9);
+		left: 2.5rem;
+		color: rgba(255, 255, 255, 0.7);
 		text-decoration: none;
-		font-size: 0.75rem;
-		letter-spacing: 0.15em;
+		font-size: 0.7rem;
+		letter-spacing: 0.18em;
 		text-transform: uppercase;
-		transition: color 0.2s ease;
+		transition: color 0.2s;
 	}
 
 	.founder-link:hover {
 		color: #fff;
+		text-decoration: none;
 	}
 
-	.header {
+	.hero-content {
+		color: #fff;
 		max-width: 760px;
-	}
-
-	.eyebrow {
-		font-size: clamp(0.75rem, 1.2vw, 0.875rem);
-		font-weight: 400;
-		letter-spacing: 0.25em;
-		text-transform: uppercase;
-		opacity: 0.7;
-		margin: 0 0 1.5rem 0;
-	}
-
-	.header h1 {
-		font-size: clamp(3rem, 7vw, 6rem);
-		font-weight: 300;
-		letter-spacing: -0.02em;
-		line-height: 1.05;
-		margin: 0 0 2rem 0;
 	}
 
 	.subtitle {
 		font-size: clamp(1rem, 1.8vw, 1.25rem);
 		font-weight: 300;
-		margin: 0;
 		letter-spacing: 0.03em;
-		opacity: 0.8;
 		font-style: italic;
+		opacity: 0.8;
+		margin: 0;
+	}
+
+	.eyebrow {
+		font-size: 0.75rem;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		opacity: 0.6;
+		margin-bottom: 0.75rem;
+		font-weight: 400;
+	}
+
+	.hero-content h1 {
+		font-size: clamp(2.75rem, 6vw, 5.5rem);
+		font-weight: 300;
+		letter-spacing: -0.02em;
+		line-height: 1.05;
+		margin: 0 0 1.5rem;
+		color: #fff;
 	}
 
 	.scroll-hint {
@@ -291,15 +326,15 @@ import housePhoto from '../assets/619_oak.jpg';
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.75rem;
-		opacity: 0.5;
+		gap: 0.6rem;
+		opacity: 0.4;
+		color: #fff;
 	}
 
 	.scroll-hint span {
-		font-size: 0.7rem;
+		font-size: 0.62rem;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
-		color: #fff;
 	}
 
 	.scroll-line {
@@ -310,187 +345,301 @@ import housePhoto from '../assets/619_oak.jpg';
 	}
 
 	@keyframes scrollPulse {
-		0%, 100% { opacity: 0.5; transform: scaleY(1); }
-		50% { opacity: 1; transform: scaleY(0.6); }
+		0%, 100% { opacity: 0.5; }
+		50%       { opacity: 1; }
 	}
 
-	.page {
+	/* ─── Editorial Layout ───────────────────────────────── */
+
+	.editorial {
 		background: #000;
 		color: #fff;
-		padding: 6rem 2rem;
+		padding-bottom: 2rem;
 	}
 
-	.container {
-		max-width: 1400px;
-		width: 100%;
-		margin: 0 auto;
-		padding: 0 3rem;
-	}
-
-	.content {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
-
-	.block {
-		padding: 3rem 0;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-	}
-
-	.block.cta {
-		border-top: 1px solid rgba(255, 255, 255, 0.2);
-		border-bottom: none;
-	}
-
-	.block h2 {
-		font-size: clamp(1.5rem, 3vw, 2rem);
-		font-weight: 500;
-		letter-spacing: -0.01em;
-		margin: 0 0 2rem 0;
-		text-transform: uppercase;
-	}
-
-	.block h3 {
-		font-size: clamp(1.125rem, 1.8vw, 1.375rem);
-		font-weight: 600;
-		margin: 0 0 1rem 0;
-		letter-spacing: -0.01em;
-	}
-
-	.block p {
-		font-size: clamp(1.125rem, 1.8vw, 1.375rem);
-		line-height: 1.7;
-		margin: 0 0 1.25rem 0;
-		font-weight: 300;
-	}
-
-	.block p:last-child {
-		margin-bottom: 0;
-	}
-
-	.list {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		margin: 2rem 0 0;
-	}
-
-	.item {
-		display: flex;
-		gap: 1.5rem;
-	}
-
-	.item:has(h3) {
-		flex-direction: column;
-		gap: 0.75rem;
-	}
-
-	.icon {
-		font-size: 2rem;
-		flex-shrink: 0;
-	}
-
-	.grid {
+	.ed-section {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5rem;
-		margin-top: 2rem;
-	}
-
-	.card {
-		background: #000;
-		border: 1px solid #fff;
-		padding: 2rem;
-		transition: background-color 0.3s ease, border-color 0.3s ease;
-	}
-
-	.card:hover {
-		background: #fff;
-		border-color: #000;
-	}
-
-	.card:hover h3,
-	.card:hover p {
-		color: #000;
-	}
-
-	.card h3 {
-		transition: color 0.3s ease;
-	}
-
-	.card p {
-		font-size: clamp(1rem, 1.5vw, 1.125rem);
-		line-height: 1.9;
-		transition: color 0.3s ease;
-	}
-
-	.button {
-		display: inline-block;
-		background: #fff;
-		color: #000;
-		border: 2px solid #fff;
-		padding: 1rem 2rem;
-		text-decoration: none;
-		font-weight: 500;
-		font-size: clamp(1rem, 1.5vw, 1.25rem);
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		margin-top: 1rem;
-		transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-	}
-
-	.button:hover {
-		background: #000;
-		color: #fff;
-		transform: translateX(8px);
-	}
-
-	.location-layout {
-		display: grid;
-		grid-template-columns: 1fr 1.5fr;
-		gap: 3rem;
-		margin-top: 2rem;
+		grid-template-columns: 240px 1fr;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		padding: 4.5rem 4rem;
 		align-items: start;
 	}
 
-	.location-info p {
-		font-size: clamp(1rem, 1.5vw, 1.25rem);
-		line-height: 1.7;
-		margin: 0 0 1.25rem 0;
-		font-weight: 300;
+	.ed-label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		padding-top: 0.2rem;
+		position: sticky;
+		top: 3rem;
 	}
 
+	.ed-name {
+		font-size: 0.72rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.62);
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	.ed-content {
+		max-width: 65ch;
+		padding-left: 3rem;
+		border-left: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.ed-content p {
+		font-size: clamp(0.975rem, 1.4vw, 1.0625rem);
+		line-height: 1.9;
+		font-weight: 300;
+		color: rgba(255, 255, 255, 0.9);
+		margin-bottom: 1.25rem;
+	}
+
+	.ed-content p:last-child {
+		margin-bottom: 0;
+	}
+
+	.ed-content strong {
+		font-weight: 500;
+		color: #fff;
+	}
+
+	/* ─── Offer List ─────────────────────────────────────── */
+
+	.offer-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.offer-item {
+		display: grid;
+		grid-template-columns: 1.25rem 1fr;
+		gap: 1rem;
+		align-items: start;
+	}
+
+	.offer-mark {
+		color: rgba(255, 255, 255, 0.4);
+		font-size: 1rem;
+		padding-top: 0.05rem;
+		line-height: 1.6;
+	}
+
+	.offer-item strong {
+		display: block;
+		font-size: 0.975rem;
+		font-weight: 500;
+		color: #fff;
+		margin-bottom: 0.25rem;
+		line-height: 1.5;
+	}
+
+	.offer-item p {
+		font-size: 0.875rem !important;
+		line-height: 1.7 !important;
+		color: rgba(255, 255, 255, 0.72) !important;
+		margin: 0 !important;
+	}
+
+	/* ─── Thrive List ───────────────────────────────────── */
+
+	.thrive-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	.thrive-item h3 {
+		font-size: 1rem;
+		font-weight: 500;
+		color: #fff;
+		margin-bottom: 0.5rem;
+		letter-spacing: -0.01em;
+	}
+
+	.thrive-item p {
+		font-size: 0.975rem !important;
+	}
+
+	/* ─── Daily Life Grid ───────────────────────────────── */
+
+	.life-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1px;
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.life-card {
+		background: #000;
+		padding: 2rem;
+		transition: background 0.3s ease;
+	}
+
+	.life-card:hover {
+		background: rgba(255, 255, 255, 0.04);
+	}
+
+	.life-card h3 {
+		font-size: 0.72rem;
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.58);
+		margin-bottom: 1rem;
+	}
+
+	.life-card p {
+		font-size: 0.9rem !important;
+		line-height: 1.85 !important;
+		color: rgba(255, 255, 255, 0.84) !important;
+		margin: 0 !important;
+	}
+
+	/* ─── House Rules ───────────────────────────────────── */
+
+	.rules-list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.rule-item {
+		display: grid;
+		grid-template-columns: 2rem 1fr;
+		gap: 1.5rem;
+		padding: 2rem 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+		align-items: start;
+	}
+
+	.rule-item:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	.rule-item:first-child {
+		padding-top: 0;
+	}
+
+	.rule-num {
+		font-size: 0.65rem;
+		color: rgba(255, 255, 255, 0.38);
+		letter-spacing: 0.08em;
+		font-style: italic;
+		padding-top: 0.2rem;
+	}
+
+	.rule-item h3 {
+		font-size: 1rem;
+		font-weight: 500;
+		color: #fff;
+		margin-bottom: 0.5rem;
+		letter-spacing: -0.01em;
+	}
+
+	/* ─── Rent ──────────────────────────────────────────── */
+
+	.rent-price {
+		font-size: clamp(2rem, 4vw, 3rem) !important;
+		font-weight: 300 !important;
+		letter-spacing: -0.02em !important;
+		margin-bottom: 1.5rem !important;
+		color: #fff !important;
+		line-height: 1.1 !important;
+	}
+
+	.rent-price span {
+		font-size: 0.45em;
+		color: rgba(255, 255, 255, 0.55);
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		font-weight: 400;
+		vertical-align: middle;
+	}
+
+	/* ─── Map ───────────────────────────────────────────── */
+
 	.map-embed {
-		border: 1px solid rgba(255, 255, 255, 0.3);
+		margin-top: 1.75rem;
 		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.12);
 	}
 
 	.map-embed iframe {
 		display: block;
-		filter: grayscale(40%) invert(90%) contrast(90%);
+		filter: grayscale(55%) invert(90%) contrast(88%);
 	}
+
+	/* ─── CTA ───────────────────────────────────────────── */
+
+	.cta {
+		background: #f4efe6;
+		color: #000;
+		padding: 9rem 4rem;
+		text-align: center;
+	}
+
+	.cta-inner {
+		max-width: 520px;
+		margin: 0 auto;
+	}
+
+	.cta-eyebrow {
+		font-size: 0.72rem;
+		letter-spacing: 0.26em;
+		text-transform: uppercase;
+		color: rgba(0, 0, 0, 0.38);
+		margin-bottom: 2rem;
+		font-weight: 400;
+	}
+
+	.cta-body {
+		font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
+		font-weight: 300;
+		line-height: 1.85;
+		margin-bottom: 3rem;
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	.cta-button {
+		display: inline-block;
+		background: #000;
+		color: #fff;
+		padding: 1rem 2.5rem;
+		text-decoration: none;
+		font-size: 0.8rem;
+		font-weight: 500;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		border: 1.5px solid #000;
+		transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+	}
+
+	.cta-button:hover {
+		background: transparent;
+		color: #000;
+		transform: translateY(-3px);
+		text-decoration: none;
+	}
+
+	/* ─── Responsive ─────────────────────────────────────── */
 
 	@media (max-width: 1024px) {
 		.hero-overlay {
-			padding: 0 3rem;
+			padding: 2.5rem 3rem;
 		}
 
-		.page {
-			padding: 5rem 2rem;
+		.ed-section {
+			grid-template-columns: 180px 1fr;
+			padding: 4rem 3rem;
 		}
 
-		.container {
-			padding: 0 2rem;
-		}
-
-		.grid {
-			grid-template-columns: 1fr;
-		}
-
-		.location-layout {
-			grid-template-columns: 1fr;
-			gap: 2rem;
+		.ed-content {
+			padding-left: 2.5rem;
 		}
 	}
 
@@ -501,39 +650,46 @@ import housePhoto from '../assets/619_oak.jpg';
 		}
 
 		.hero-overlay {
-			padding: 0 1.5rem;
+			padding: 2rem;
+		}
+
+		.founder-link {
+			left: 1.5rem;
+			top: 1.5rem;
 		}
 
 		.scroll-hint {
 			display: none;
 		}
 
-		.page {
-			padding: 4rem 1.5rem;
+		.ed-section {
+			grid-template-columns: 1fr;
+			padding: 3rem 1.5rem;
+			gap: 0;
 		}
 
-		.container {
-			padding: 0 1rem;
+		.ed-label {
+			position: static;
+			flex-direction: row;
+			align-items: center;
+			gap: 0.75rem;
+			margin-bottom: 1.5rem;
 		}
 
-		.content {
-			gap: 2.5rem;
+		.ed-content {
+			padding-left: 0;
+			border-left: none;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			padding-top: 1.5rem;
 		}
 
-		.block {
-			padding: 2rem 0;
+		.life-grid {
+			grid-template-columns: 1fr;
 		}
 
-		.card {
-			padding: 1.5rem;
+		.cta {
+			padding: 6rem 2rem;
 		}
 
-		.item {
-			gap: 1rem;
-		}
-
-		.icon {
-			font-size: 1.5rem;
-		}
 	}
 </style>
