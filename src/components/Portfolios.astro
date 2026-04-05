@@ -9,262 +9,329 @@ import opalitehealthLogo from '../assets/opalitehealth.png';
 
 <section id="portfolios" class="portfolios-section">
 	<div class="section-container">
-		<div class="section-header">
+
+		<header class="section-header">
 			<h2 class="section-title">Portfolios</h2>
 			<p class="section-subtitle">我投資的未來科技</p>
+		</header>
+
+		<div class="group-row">
+			<span class="group-label">Founder</span>
 		</div>
 
-		<div class="portfolios-grid">
-			<div class="portfolio-card">
-				<div class="card-content">
-					<div class="logo-wrapper">
-						<Image src={skiesoftLogo} alt="Skiesoft Logo" class="company-logo" loading="lazy" />
+		<div class="founders-grid">
+			<a href="https://skiesoft.com/" target="_blank" class="portfolio-card" data-simple-event="portfolio_skiesoft">
+				<div class="card-fill"></div>
+				<div class="card-inner">
+					<div class="card-top">
+						<div class="logo-wrapper">
+							<Image src={skiesoftLogo} alt="Skiesoft Logo" class="company-logo" loading="lazy" />
+						</div>
+						<span class="tag">Founder</span>
 					</div>
-					<div class="company-header">
-						<h3 class="company-name">軟雲股份有限公司</h3>
-						<span class="co-founder-tag">CO-FOUNDER</span>
+					<h3 class="company-name">軟雲股份有限公司</h3>
+					<div class="card-cta">
+						<span>skiesoft.com</span>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
 					</div>
-					<a href="https://skiesoft.com/" target="_blank" class="company-link" data-simple-event="portfolio_skiesoft">查看官網 →</a>
 				</div>
-			</div>
+			</a>
 
-			<div class="portfolio-card">
-				<div class="card-content">
-					<div class="logo-wrapper">
-						<Image src={chatbottaLogo} alt="Chatbotta Logo" class="company-logo" loading="lazy" />
+			<a href="https://chatbotta.com" target="_blank" class="portfolio-card" data-simple-event="portfolio_chatbotta">
+				<div class="card-fill"></div>
+				<div class="card-inner">
+					<div class="card-top">
+						<div class="logo-wrapper">
+							<Image src={chatbottaLogo} alt="Chatbotta Logo" class="company-logo" loading="lazy" />
+						</div>
+						<span class="tag">Founder</span>
 					</div>
-					<div class="company-header">
-						<h3 class="company-name">創易聊股份有限公司</h3>
-						<span class="co-founder-tag">CO-FOUNDER</span>
+					<h3 class="company-name">創易聊股份有限公司</h3>
+					<div class="card-cta">
+						<span>chatbotta.com</span>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
 					</div>
-					<a href="https://chatbotta.com" target="_blank" class="company-link" data-simple-event="portfolio_chatbotta">查看官網 →</a>
 				</div>
-			</div>
+			</a>
 
-			<div class="portfolio-card">
-				<div class="card-content">
-					<div class="logo-wrapper">
-						<Image src={lunabillLogo} alt="LunaBill Logo" class="company-logo" loading="lazy" />
+			<a href="https://lunabill.com" target="_blank" class="portfolio-card" data-simple-event="portfolio_lunabill">
+				<div class="card-fill"></div>
+				<div class="card-inner">
+					<div class="card-top">
+						<div class="logo-wrapper">
+							<Image src={lunabillLogo} alt="LunaBill Logo" class="company-logo" loading="lazy" />
+						</div>
+						<span class="tag">Founder</span>
 					</div>
-					<div class="company-header">
-						<h3 class="company-name">LunaBill</h3>
-						<span class="co-founder-tag">CO-FOUNDER</span>
+					<h3 class="company-name">LunaBill</h3>
+					<div class="card-cta">
+						<span>lunabill.com</span>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
 					</div>
-					<a href="https://lunabill.com" target="_blank" class="company-link" data-simple-event="portfolio_lunabill">查看官網 →</a>
 				</div>
-			</div>
-
-			<div class="portfolio-card">
-				<div class="card-content">
-					<div class="logo-wrapper">
-						<Image src={parseLogo} alt="Parse Logo" class="company-logo" loading="lazy" />
-					</div>
-					<div class="company-header">
-						<h3 class="company-name">Parse</h3>
-						<span class="investor-tag">INVESTOR</span>
-					</div>
-					<a href="https://www.parse.bot/" target="_blank" class="company-link" data-simple-event="portfolio_parse">查看官網 →</a>
-				</div>
-			</div>
-
-			<div class="portfolio-card">
-				<div class="card-content">
-					<div class="logo-wrapper">
-						<Image src={opalitehealthLogo} alt="Opalite Health Logo" class="company-logo" loading="lazy" />
-					</div>
-					<div class="company-header">
-						<h3 class="company-name">Opalite Health</h3>
-						<span class="investor-tag">INVESTOR</span>
-					</div>
-					<a href="https://opalitehealth.com/" target="_blank" class="company-link" data-simple-event="portfolio_opalitehealth">查看官網 →</a>
-				</div>
-			</div>
+			</a>
 		</div>
+
+		<div class="group-row investments-row">
+			<span class="group-label">Investments</span>
+		</div>
+
+		<div class="investors-grid">
+			<a href="https://www.parse.bot/" target="_blank" class="portfolio-card" data-simple-event="portfolio_parse">
+				<div class="card-fill"></div>
+				<div class="card-inner">
+					<div class="card-top">
+						<div class="logo-wrapper">
+							<Image src={parseLogo} alt="Parse Logo" class="company-logo" loading="lazy" />
+						</div>
+						<span class="tag">Investor</span>
+					</div>
+					<h3 class="company-name">Parse</h3>
+					<div class="card-cta">
+						<span>parse.bot</span>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</div>
+			</a>
+
+			<a href="https://opalitehealth.com/" target="_blank" class="portfolio-card" data-simple-event="portfolio_opalitehealth">
+				<div class="card-fill"></div>
+				<div class="card-inner">
+					<div class="card-top">
+						<div class="logo-wrapper">
+							<Image src={opalitehealthLogo} alt="Opalite Health Logo" class="company-logo" loading="lazy" />
+						</div>
+						<span class="tag">Investor</span>
+					</div>
+					<h3 class="company-name">Opalite Health</h3>
+					<div class="card-cta">
+						<span>opalitehealth.com</span>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</div>
+			</a>
+		</div>
+
 	</div>
 </section>
 
 <style>
 	.portfolios-section {
-		min-height: 100vh;
 		background: #000;
 		color: #fff;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.section-container {
 		max-width: 1400px;
-		width: 100%;
 		margin: 0 auto;
-		padding: 6rem 4rem;
+		padding: 5rem 4rem 6rem;
 	}
 
 	.section-header {
-		margin-bottom: 4rem;
-		border-bottom: 1px solid #fff;
-		padding-bottom: 1.5rem;
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 2rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+		padding-bottom: 2rem;
+		margin-bottom: 3rem;
 	}
 
 	.section-title {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		font-weight: 300;
-		letter-spacing: -0.02em;
-		line-height: 1;
-		margin: 0 0 0.5rem 0;
-		color: #fff;
+		font-size: clamp(3rem, 7vw, 6rem);
+		font-weight: 200;
+		letter-spacing: -0.04em;
+		line-height: 0.9;
+		margin: 0;
 		text-transform: uppercase;
 	}
 
 	.section-subtitle {
-		font-size: clamp(1rem, 2vw, 1.25rem);
-		font-weight: 200;
-		color: #fff;
+		font-size: clamp(0.875rem, 1.5vw, 1rem);
+		font-weight: 300;
+		color: rgba(255, 255, 255, 0.7);
 		margin: 0;
-		letter-spacing: 0.02em;
+		letter-spacing: 0.06em;
+		flex-shrink: 0;
 	}
 
-	.portfolios-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 2rem;
-	}
-
-	.portfolio-card {
-		background: #000;
-		border: 1px solid #fff;
-		padding: 2.5rem;
-		transition: background-color 0.3s ease, border-color 0.3s ease;
-		position: relative;
-	}
-
-	.portfolio-card:hover {
-		background: #fff;
-		border-color: #000;
-	}
-
-	.portfolio-card:hover .card-content,
-	.portfolio-card:hover .company-name,
-	.portfolio-card:hover .company-link {
-		color: #000;
-	}
-
-	.portfolio-card:hover .co-founder-tag,
-	.portfolio-card:hover .investor-tag {
-		background: #000;
-		color: #fff;
-		border-color: #000;
-	}
-
-	.portfolio-card:hover .logo-wrapper {
-		border-color: #000;
-	}
-
-	.card-content {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		transition: color 0.3s ease;
-	}
-
-	.logo-wrapper {
-		width: 80px;
-		height: 80px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 1px solid #fff;
-		background: #fff;
-		transition: border-color 0.3s ease;
-	}
-
-	.company-logo {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-		padding: 0.5rem;
-	}
-
-	.company-header {
+	.group-row {
 		display: flex;
 		align-items: center;
 		gap: 1rem;
-		flex-wrap: wrap;
+		margin-bottom: 1.25rem;
+	}
+
+	.group-row::after {
+		content: '';
+		flex: 1;
+		height: 1px;
+		background: rgba(255, 255, 255, 0.12);
+	}
+
+	.group-label {
+		font-size: 0.625rem;
+		font-weight: 700;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	.investments-row {
+		margin-top: 2rem;
+	}
+
+	.founders-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1px;
+		background: rgba(255, 255, 255, 0.22);
+		border: 1px solid rgba(255, 255, 255, 0.22);
+	}
+
+	.investors-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1px;
+		background: rgba(255, 255, 255, 0.22);
+		border: 1px solid rgba(255, 255, 255, 0.22);
+	}
+
+	.portfolio-card {
+		position: relative;
+		overflow: hidden;
+		background: #000;
+		padding: 2.5rem;
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		min-height: 220px;
+		transition: color 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+	}
+
+	.card-fill {
+		position: absolute;
+		inset: 0;
+		background: #fff;
+		clip-path: inset(100% 0 0 0);
+		transition: clip-path 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	.portfolio-card:hover .card-fill { clip-path: inset(0% 0 0 0); }
+	.portfolio-card:hover { color: #000; }
+
+	.card-inner {
+		position: relative;
+		z-index: 1;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 1.5rem;
+	}
+
+	.card-top {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	.logo-wrapper {
+		width: 56px;
+		height: 56px;
+		background: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		transition: background 0.45s cubic-bezier(0.77, 0, 0.175, 1), box-shadow 0.45s ease;
+	}
+
+	.portfolio-card:hover .logo-wrapper {
+		background: rgba(0, 0, 0, 0.06);
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+	}
+
+	.company-logo {
+		width: 44px;
+		height: 44px;
+		object-fit: contain;
+	}
+
+	.tag {
+		font-size: 0.5625rem;
+		font-weight: 700;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.75);
+		border: 1px solid rgba(255, 255, 255, 0.45);
+		padding: 0.25rem 0.5rem;
+		transition: color 0.45s ease, border-color 0.45s ease;
+	}
+
+	.portfolio-card:hover .tag {
+		color: rgba(0, 0, 0, 0.4);
+		border-color: rgba(0, 0, 0, 0.15);
 	}
 
 	.company-name {
-		font-size: clamp(1.25rem, 2vw, 1.5rem);
+		font-size: clamp(1.125rem, 2vw, 1.5rem);
 		font-weight: 500;
 		margin: 0;
-		color: #fff;
-		letter-spacing: -0.01em;
-		transition: color 0.3s ease;
+		letter-spacing: -0.02em;
+		line-height: 1.2;
+		flex: 1;
 	}
 
-	.co-founder-tag,
-	.investor-tag {
-		display: inline-block;
-		font-size: 0.625rem;
-		font-weight: 600;
-		letter-spacing: 0.1em;
-		padding: 0.25rem 0.5rem;
-		background: #fff;
-		color: #000;
-		border: 1px solid #fff;
-		transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+	.card-cta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 0.75rem;
+		letter-spacing: 0.08em;
+		color: rgba(255, 255, 255, 0.65);
+		border-top: 1px solid rgba(255, 255, 255, 0.22);
+		padding-top: 1.25rem;
+		transition: color 0.45s ease, border-color 0.45s ease;
 	}
 
-	.company-link {
-		display: inline-block;
-		color: #fff;
-		text-decoration: none;
-		font-weight: 400;
-		font-size: 0.875rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		transition: opacity 0.3s ease, color 0.3s ease;
+	.portfolio-card:hover .card-cta {
+		color: rgba(0, 0, 0, 0.45);
+		border-top-color: rgba(0, 0, 0, 0.1);
 	}
 
-	.company-link:hover {
-		opacity: 1;
+	.card-cta svg {
+		width: 16px;
+		height: 16px;
+		flex-shrink: 0;
+		transition: transform 0.3s ease;
 	}
 
-	.portfolio-card:hover .company-link {
-		color: #000;
-	}
+	.portfolio-card:hover .card-cta svg { transform: translate(2px, -2px); }
 
 	@media (max-width: 1024px) {
-		.section-container {
-			padding: 5rem 3rem;
-		}
-
-		.portfolios-grid {
-			gap: 1.5rem;
-		}
+		.section-container { padding: 4rem 3rem 5rem; }
+		.founders-grid { grid-template-columns: repeat(2, 1fr); }
+		.founders-grid .portfolio-card:last-child { grid-column: 1 / -1; }
 	}
 
 	@media (max-width: 768px) {
-		.section-container {
-			padding: 4rem 2rem;
-		}
-
-		.section-header {
-			margin-bottom: 3rem;
-		}
-
-		.portfolios-grid {
-			grid-template-columns: 1fr;
-			gap: 1.5rem;
-		}
-
-		.portfolio-card {
-			padding: 2rem;
-		}
-
-		.logo-wrapper {
-			width: 60px;
-			height: 60px;
-		}
+		.section-container { padding: 3rem 1.5rem 4rem; }
+		.founders-grid, .investors-grid { grid-template-columns: 1fr; }
+		.founders-grid .portfolio-card:last-child { grid-column: auto; }
+		.portfolio-card { min-height: auto; padding: 2rem; }
 	}
 </style>
